@@ -203,7 +203,7 @@ const noRawStyleHex = {
     const PRIMITIVE_VAR = /var\(--(navy|gold)-\d+\)/
 
     // Map de hex → token semántico sugerido
-    const HEX_SUGGESTION: Record<string, string> = {
+    const HEX_SUGGESTION = {
       '#1a2d5a': 'action.primary',
       '#213872': 'action.primaryHover',
       '#2d4a8c': 'action.primaryActive',
@@ -330,7 +330,7 @@ const noUnsafeCnSpread = {
               arg.argument.type === 'MemberExpression' ?
                 `${arg.argument.object.name ?? '...'}.${arg.argument.property.name ?? '...'}` :
               arg.argument.type === 'CallExpression' ? `${
-                (arg.argument.callee as any)?.object?.name ?? '...'}.split(...)` : '...'
+                arg.argument.callee?.object?.name ?? '...'}.split(...)` : '...'
 
             context.report({
               node: arg,

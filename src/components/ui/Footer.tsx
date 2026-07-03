@@ -19,6 +19,7 @@ export default function Footer() {
       {/* Accent top border */}
       <div
         className="h-[1px]"
+        // eslint-disable-next-line design-tokens/no-raw-style-hex -- gradiente preexistente, grandfathered al activar el plugin
         style={{ background: 'linear-gradient(90deg, transparent, rgba(59,94,166,0.6) 50%, transparent)' }}
         aria-hidden="true"
       />

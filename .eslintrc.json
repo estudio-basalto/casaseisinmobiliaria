@@ -1,6 +1,6 @@
 {
   "extends": "next/core-web-vitals",
-  "plugins": ["./tools/eslint-plugin-design-tokens"],
+  "plugins": ["design-tokens"],
   "rules": {
     "@next/next/no-img-element": "off",
     "design-tokens/no-raw-color-classes":           "error",

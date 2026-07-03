@@ -32,6 +32,7 @@ export function ConfirmDialog({
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      // eslint-disable-next-line design-tokens/no-raw-style-hex -- overlay preexistente, grandfathered al activar el plugin
       style={{ background: 'rgba(13,20,40,0.65)', backdropFilter: 'blur(4px)' }}
       onClick={onCancel}
     >
